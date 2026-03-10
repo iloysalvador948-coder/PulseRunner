@@ -5,6 +5,8 @@ import {
   Dimensions, Animated, Vibration, Platform,
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+// Add this right after your imports, before the game constants
+import { TouchableOpacity } from 'react-native';
 
 const { width: SW, height: SH } = Dimensions.get('window');
 
@@ -331,9 +333,7 @@ export default function App() {
     ));
   };
 
-  // ─────────────────────────────────────────────────────────────────────────
-  // START SCREEN
-  // ─────────────────────────────────────────────────────────────────────────
+
   if (screen === 'start') return (
     <TouchableWithoutFeedback onPress={handleTap}>
       <View style={styles.root}>
